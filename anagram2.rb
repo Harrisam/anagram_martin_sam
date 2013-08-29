@@ -3,18 +3,18 @@
 array  = ["stars" , "mary" , "rats", "tars", "army" , "banana"]
 	
 
-def anagram_of(list)
+def anagrams_of(list)
 	matching_words = []
 	list.each do |word|
-		anagrams = []
+		anagram = []
 		list.each do |another_word|
 			if word.chars.sort == another_word.chars.sort
 				anagrams << another_word
-			end	
+			end
 		end
-		matching_words << anagrams
+		matching_words << anagram
 	end
 	matching_words.uniq
 end
 
-puts anagram_of(array).inspect
+puts anagrams_of(array).inspect
